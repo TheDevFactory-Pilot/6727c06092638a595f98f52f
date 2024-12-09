@@ -18,10 +18,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@master
+        uses: SonarSource/sonarqube-scan-action@v4.1.0
         with:
-          entryPoint: 'sonar-scanner'
-          args: |
+          args: >
             -Dsonar.organization=thedevfactory-pilot
             -Dsonar.projectKey=karl_react_6cf2c962-9f85-4b1d-a262-2c5f923aa02b_66cd20abd664a233ca89b3ce_6727c06092638a595f98f532_6727c06092638a595f98f52f
             -Dsonar.branch.name=main
